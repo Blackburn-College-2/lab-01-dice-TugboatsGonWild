@@ -15,20 +15,29 @@ public class Roller {
 
     public Roller() {
         Scanner input = new Scanner(System.in);
-        System.out.println("How many dice?");
+        System.out.print("How many dice? ");
         int diceN = input.nextInt();
         Die[] dice = new Die[diceN];
         int sidesMax = 0;
         int sides;
         for (int i = 0; i < dice.length; i++) {
-            System.out.print("How many sides to die" + i);
+            System.out.print("How many sides to die " +i+" ");
             sides = input.nextInt();
             sidesMax += sides;
             dice[i] = new Die(sides);
         }
 
-        System.out.println("How many rolls til print?");
+        System.out.print("How many rolls til print?");
         int rolls = input.nextInt();
         Counter counter = new Counter(rolls, sidesMax, diceN);
+
+        for (int j = 0; true; j++) {
+            int num = 0;
+            for (int i = 0; i < dice.length; i++) {
+                num += dice[i].roll();
+            }
+            counter.addData(num);
+        }
+
     }
 }

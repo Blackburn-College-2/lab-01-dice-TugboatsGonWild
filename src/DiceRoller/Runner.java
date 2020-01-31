@@ -5,8 +5,6 @@
  */
 package DiceRoller;
 
-
-
 /**
  * PROJECTION...3 Hours
  *
@@ -20,5 +18,8 @@ public class Runner {
     public static void main(String[] args) {
         Roller roller = new Roller();
     }
+    //I WANNA USE A LATE PASS. THIS IS MY FIRST OF THREE
+    //TIME ESTIMATE: 3 hours
+    //ACTUAL TIME: 8.5 hours
 
 }

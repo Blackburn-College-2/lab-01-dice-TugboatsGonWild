@@ -15,7 +15,6 @@ public class Die {
 
     public Die(int x) {
         sides = x;
-        Roller roller = new Roller();
     }
 
     public int roll() {
